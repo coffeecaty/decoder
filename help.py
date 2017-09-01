@@ -7,5 +7,6 @@ def help():
     print('help：显示本帮助文档')
     print('resetcode：重置密码原文')
     print('reversed：反转')
+    print('atbash：atbash转换')
     return
 

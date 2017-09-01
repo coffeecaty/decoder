@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 import text
 
-def AToa(x):
+def atbash(x):
  y=list(x)
- DAToa={'A':'a','B':'b','C':'c','D':'d','E':'e','F':'f','G':'g','H':'h','I':'i','J':'j','K':'k','L':'l','M':'m','N':'n','O':'o','P':'p','Q':'q','R':'r','S':'s','T':'t','U':'u','V':'v','W':'w','X':'x','Y':'y','Z':'z'}
+ Datbash={'a':'z','b':'y','c':'x','d':'w','e':'v','f':'u','g':'t','h':'s','i':'r','j':'q','k':'p','l':'o','m':'n','n':'m','o':'l','p':'k','q':'j','r':'i','s':'h','t':'g','u':'f','v':'e','w':'d','x':'c','y':'b','z':'a'}
  n=0
  while n < len(y):
      
-   if y[n] in DAToa:
-       y[n]=DAToa[y[n]]
+   if y[n] in Datbash:
+       y[n]=Datbash[y[n]]
        n=n+1
    else:
        n=n+1
