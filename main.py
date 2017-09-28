@@ -42,10 +42,29 @@ while 1:
         break
       else:
         print('密码扔为',code,'请重新选择解码方式')
+ elif way == 'shift':
+   import shift
+   decode = shift.shift(code)
+   printf(decode)
+   update = AToa(input('对结果解码请按y,对原码重解请按n,退出请按其他任意键:'))
+   if update == 'y':
+      code = decode
+      print('密码更新为',code,'请继续选择解码方式')
+   elif update == 'n':
+      print('密码扔为',code,'请重新选择解码方式') 
+   else :
+      over=AToa(input('确认退出请输入q:'))
+      if over == 'q':
+        break
+      else:
+        print('密码扔为',code,'请重新选择解码方式')
  elif way == 'rot':
    while 1 :
-    foot=input('请输入位移的步长(0-25):')
+    foot=input('请输入位移的步长(0-25,默认13):')
     if foot in NUME:
+        break
+    elif foot == '':
+        foot = 13
         break
     else:
         print('请输入合法的步长')
@@ -66,8 +85,11 @@ while 1:
         print('密码扔为',code,'请重新选择解码方式')
  elif way == 'nplus':
    while 1 :
-    foot=input('请输入位移的步长(0-9):')
+    foot=input('请输入位移的步长(0-9，默认1):')
     if foot in NUMN:
+        break
+    elif foot == '':
+        foot = 1
         break
     else:
         print('请输入合法的步长')
@@ -88,8 +110,11 @@ while 1:
         print('密码扔为',code,'请重新选择解码方式')
  elif way == 'nminus':
    while 1 :
-    foot=input('请输入位移的步长(0-9):')
+    foot=input('请输入位移的步长(0-9，默认9):')
     if foot in NUMN:
+        break
+    elif foot == '':
+        foot = 9
         break
     else:
         print('请输入合法的步长')

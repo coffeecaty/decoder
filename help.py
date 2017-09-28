@@ -11,5 +11,6 @@ def help():
     print('rot：位移')
     print('nplus：数字位移')
     print('nminus：数字转置')
+    print('shift：符号shift转数字')
     return
 
